@@ -24,10 +24,41 @@ logo.addEventListener("dblclick", event =>{
   logo.style.color = "green";
 })
 
-// destination image mouseenter alert
+// destination image sizing
 
 const destinationImg = document.querySelector('.content-destination img');
 
 destinationImg.addEventListener("mouseenter", event =>{
-  alert("Looks fun huh?");
-});
+  destinationImg.style.transform = "scale(1.5)";
+})
+
+destinationImg.addEventListener("mouseleave", event =>{
+  destinationImg.style.transform = "scale(1)";
+})
+
+// sign up buttons
+
+const buttons = document.querySelectorAll('.btn');
+
+buttons.forEach((event=>{
+  event.addEventListener("click", ()=>{
+    alert("Thanks for signing up!");
+  })
+}))
+
+// welcome text 
+
+const welcomeText = document.querySelector('.intro');
+
+welcomeText.addEventListener("mousedown", event=>{
+  welcomeText.style.color = "pink";
+})
+
+// fun bus image
+
+const busImg = document.querySelector('intro img');
+
+busImg.addEventListener("contextmenu", event=>{
+  alert("Please don't steal our picture!");
+  event.preventDefault();
+})
