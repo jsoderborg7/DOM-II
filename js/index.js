@@ -20,6 +20,14 @@ navLink.forEach((function(event) {
 const logo = document.querySelector('.logo-heading');
 
 logo.addEventListener("dblclick", event =>{
-  logo.style.transform = "rotate(180deg)";
+  logo.style.transform = "scale(2)";
+  logo.style.color = "green";
 })
 
+// destination image mouseenter alert
+
+const destinationImg = document.querySelector('.content-destination img');
+
+destinationImg.addEventListener("mouseenter", event =>{
+  alert("Looks fun huh?");
+});
