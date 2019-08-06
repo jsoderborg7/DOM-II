@@ -54,11 +54,24 @@ welcomeText.addEventListener("mousedown", event=>{
   welcomeText.style.color = "pink";
 })
 
-// fun bus image
-
-const busImg = document.querySelector('intro img');
-
-busImg.addEventListener("contextmenu", event=>{
-  alert("Please don't steal our picture!");
+welcomeText.addEventListener("contextmenu", event=>{
   event.preventDefault();
+});
+
+// window
+
+window.addEventListener("load", event=>{
+  alert("Yay! It loaded!");
+})
+
+// welcome img
+
+const welcomeImg = document.querySelector('.intro img');
+
+welcomeImg.addEventListener("drag", event=>{
+  welcomeImg.style.transform = "scale(.5)";
+})
+
+welcomeImg.addEventListener("dragend", event=>{
+  welcomeImg.style.transform = "scale(1)";
 })
